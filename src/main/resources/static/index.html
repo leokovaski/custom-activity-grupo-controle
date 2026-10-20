@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grupo Controle</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Grupo Controle</h1>
+    <p class="subtitle">Marca os contatos desta jornada como grupo de controle.</p>
+
+    <div class="form-group">
+      <label for="tipo">Tipo <span class="required">*</span></label>
+      <select id="tipo">
+        <option value="GC">GC = Grupo Controle</option>
+        <option value="GCU" disabled>GCU = Grupo Controle Universal (em breve)</option>
+        <option value="MARC" disabled>MARC = Marcação (em breve)</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="journeyNameView">Jornada</label>
+      <input type="text" id="journeyNameView" readonly value="carregando…" />
+    </div>
+
+    <div class="form-group">
+      <label for="stepView">Step desta activity</label>
+      <input type="text" id="stepView" readonly value="carregando…" />
+    </div>
+
+    <div class="info-box">
+      <strong>Dados enviados automaticamente:</strong>
+      <ul>
+        <li><code>contactKey</code>, <code>journeyName</code>, <code>journeyId</code>, <code>activityKey</code>, <code>step</code></li>
+        <li><code>requestId</code>, <code>eventDate</code>, <code>activityId</code></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Postmonger: comunicação entre o iframe e o Journey Builder (hospedado localmente) -->
+  <script src="js/postmonger.min.js"></script>
+  <script src="js/customActivity.js"></script>
+</body>
+</html>
